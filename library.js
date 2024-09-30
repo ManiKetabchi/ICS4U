@@ -1,5 +1,5 @@
 class Book {
-    constructor(title, author, year) {
+    constructor(library) {
         this.title = title
         this.author = author
         this.year = year
@@ -22,10 +22,7 @@ class Book {
         }
     }
 }
-class Library {
 
-
-}
 
 for (let i = 0; i < 1;) {
     if (pagenumber == 0) {
@@ -48,5 +45,7 @@ for (let i = 0; i < 1;) {
         let book = new Book(currtitle, currauthor, curryear)
         console.log("made book")
         pagenumber = 0
+    }
+    if (pagenumber == 3) {
     }
 }

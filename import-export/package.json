@@ -1,0 +1,12 @@
+{
+  "name": "import-export",
+  "version": "1.0.0",
+  "main": "app-commonJS.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mani",
+  "license": "ISC",
+  "description": "",
+  "type": "module"
+}
