@@ -11,16 +11,17 @@ let students = [
     {id: 3, name: "Bob", age: 20}
 ];
 
-app.get("/students", (req, res) => {
+app.get("/api/students", (req, res) => {
     res.json(students);
 });
 
-app.get("/students/:id", (req, res) => {
-    const student = students.find((student) => student.id === parseInt(req.params.id));
+app.get("/api/students/:id", (req, res) => {
+    const student = students.find(s => s.id === parseInt(req.params.id));
+    if (!student) return res.status(404).send("The student with the given ID was not found");
     res.json(student);
 });
 
-app.post("/students", (req, res) => {
+app.post("/api/students", (req, res) => {
     const student = {
         id: students.length + 1,
         name: req.body.name,
